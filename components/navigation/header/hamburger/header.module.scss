@@ -1,0 +1,13 @@
+.brand_mobile_menu {
+  display: none;
+  position: sticky;
+  left: 4%;
+  cursor: pointer;
+  @apply text-white;
+}
+
+@media screen and (max-width: var("--screen-sm")) {
+  .brand_mobile_menu {
+    display: block;
+  }
+}

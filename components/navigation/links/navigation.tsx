@@ -17,7 +17,7 @@ const NavigationLinks = async ({ lang, links }: componenet) => {
       {links.map((link) => {
         return (
           <Link
-            href={`${lang}/${link.href}`}
+            href={`/${lang}/${link.href}`}
             lang={lang}
             key={link.title}
             data-testid={link.title}

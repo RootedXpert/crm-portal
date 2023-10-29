@@ -18,9 +18,9 @@ type componenet = {
 const Navbar = async ({ lang }: componenet) => {
   return (
     <nav className={style.brand} data-testid="navigation.header">
-      <Hamburger style={style} />
-      <BrandLogo style={style} lang={lang} />
-      <HeaderLinks style={style} lang={lang} />
+      <Hamburger />
+      <BrandLogo lang={lang} />
+      <HeaderLinks lang={lang} />
     </nav>
   );
 };

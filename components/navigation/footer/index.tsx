@@ -28,7 +28,7 @@ const Footer = async ({ lang }: componenet) => {
       <Navigation styles={styles} t={t} lang={lang} />
       <FooterStatement styles={styles} t={t} />
       <SocialLinks styles={styles} />
-      <CopyRight styles={styles} t={t} />
+      <CopyRight styles={styles} t={t} lang={lang} />
     </footer>
   );
 };

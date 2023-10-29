@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
+import styles from "./header.module.scss";
 
 const LanguageSelector = dynamic(() => import("@/components/languageselector"));
+
 const NavigationLinks = dynamic(
   () => import("@/components/navigation/links/navigation")
 );
@@ -10,7 +12,6 @@ type styles = {
 };
 type componenet = {
   lang: string;
-  style: styles;
 };
 
 const links = [
@@ -35,14 +36,14 @@ const links = [
     title: "navigation.footer.links.sign",
   },
 ];
-const HeaderLinks: React.FC<componenet> = ({ style, lang }) => {
+const HeaderLinks: React.FC<componenet> = ({ lang }) => {
   return (
     <div
-      className={style.brand_nav_links}
+      className={styles.brand_nav_links}
       data-testid="navigation.header.links"
     >
       <NavigationLinks lang={lang} links={links} />
-      <LanguageSelector />
+      <LanguageSelector lang={lang} />
     </div>
   );
 };

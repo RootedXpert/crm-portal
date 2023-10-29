@@ -1,15 +1,9 @@
-type styles = {
-  readonly [key: string]: string;
-};
+import styles from "./header.module.scss";
 
-type fc = {
-  style: styles;
-};
-
-const Hamburger: React.FC<fc> = ({ style }) => {
+const Hamburger: React.FC = () => {
   return (
     <div
-      className={style.brand_mobile_menu}
+      className={styles.brand_mobile_menu}
       data-testid="navigation.header.switch"
     >
       <i className="material-icons hamburger">menu</i>

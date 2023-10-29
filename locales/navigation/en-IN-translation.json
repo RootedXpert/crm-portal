@@ -1,5 +1,15 @@
 {
   "navigation": {
+    "header": {
+      "languageselector": {
+        "en-IN": "English",
+        "hi": "Hindi",
+        "bn-IN": "Bengali",
+        "mr-IN": "Marathi",
+        "te-IN": "Telugu",
+        "ta-IN": "Tamil"
+      }
+    },
     "footer": {
       "title": {
         "navigation": "Navigation",

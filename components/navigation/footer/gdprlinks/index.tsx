@@ -8,32 +8,34 @@ type styles = {
 type fc = {
   styles: styles;
   t: TFunction<any, string>;
+  lang: string;
 };
 
 const Links = [
   {
-    href: "/contact",
+    href: "contact",
     title: "navigation.footer.links.contact",
   },
   {
-    href: "/terms",
+    href: "terms",
     title: "navigation.footer.links.terms",
   },
   {
-    href: "/privacy",
+    href: "privacy",
     title: "navigation.footer.links.privacy",
   },
 ];
 
-const GdprLinks: React.FC<fc> = ({ styles, t }) => {
+const GdprLinks: React.FC<fc> = ({ styles, t, lang }) => {
   return (
     <div className={styles.brand_row_CopyRight_GDPR}>
       {Links.map((link) => {
         return (
           <Link
             className={styles.brand_row_CopyRight_GDPR_Text}
-            href={link.href}
+            href={`/${lang}/${link.href}`}
             key={link.title}
+            lang={lang}
             data-testid={link.title}
           >
             {t(link.title)}

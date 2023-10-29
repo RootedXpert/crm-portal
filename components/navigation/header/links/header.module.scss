@@ -1,0 +1,18 @@
+.brand_nav_links {
+  @apply flex items-center;
+  width: 30%;
+  min-width: 400px;
+  justify-content: space-evenly;
+  a {
+    @apply text-white;
+  }
+}
+
+@media screen and (max-width: var("--screen-sm")) {
+  .brand_nav_links {
+    display: none;
+    a {
+      @apply text-white;
+    }
+  }
+}

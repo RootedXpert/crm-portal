@@ -15,15 +15,16 @@ type styles = {
 type fc = {
   styles: styles;
   t: TFunction<any, string>;
+  lang: string;
 };
 
-const CopyRight: React.FC<fc> = ({ styles, t }) => {
+const CopyRight: React.FC<fc> = ({ styles, t, lang }) => {
   var d = new Date();
   return (
     <div className={styles.brand_row} data-testid="navigation.footer.row">
       <div className={styles.brand_row_CopyRight}>
         <CopyRightNotice t={t} styles={styles} />
-        <GdprLinks t={t} styles={styles} />
+        <GdprLinks t={t} styles={styles} lang={lang} />
       </div>
     </div>
   );
