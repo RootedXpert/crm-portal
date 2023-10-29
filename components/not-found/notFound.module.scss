@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  &__Box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 210px;
+  }
+  &__Box__Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 60rem;
+    width: unquote($string: "min(90%,60rem)");
+    img {
+      width: unquote($string: "min(90%,60rem)");
+    }
+  }
+}

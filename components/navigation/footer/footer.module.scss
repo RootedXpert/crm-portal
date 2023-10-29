@@ -1,0 +1,100 @@
+.brand {
+  @apply bg-primary flex justify-evenly gap-4 flex-col items-center border-t-2;
+  border-top-right-radius: var(--brand-border-radius);
+  border-top-left-radius: var(--brand-border-radius);
+  padding: 3rem 1rem;
+  &_row {
+    @apply flex justify-between flex-wrap gap-4 w-[90%]  max-w-3xl;
+    &_Image {
+      height: 80px;
+      width: 200px;
+    }
+    &_subrow {
+      display: flex;
+      justify-content: space-evenly;
+      &_Link {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 1rem;
+        p,
+        a {
+          @apply text-white;
+          margin: 0.4rem;
+        }
+      }
+    }
+    &_Disc_Title,
+    &_Disc_Text {
+      @apply text-white;
+    }
+    &_social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0.4rem 0;
+      gap: 1rem;
+      &_Link {
+        @apply text-white;
+        &_Image {
+          height: 75%;
+        }
+      }
+    }
+    &_CopyRight {
+      border-top: 1px solid var("--brand-white");
+      width: 95%;
+      @apply max-w-3xl;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &_Year {
+        margin: 1rem 0;
+        &__Text {
+          @apply text-white;
+        }
+      }
+      &_GDPR {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+        gap: 0.6rem;
+        &_Text {
+          @apply text-white;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: var("--screen-sm")) {
+  .brand_footer {
+    &_row {
+      justify-content: center;
+      align-items: center;
+      &_Image {
+        height: 80px;
+        width: 200px;
+      }
+      &_subrow {
+        justify-content: space-between;
+
+        width: 100%;
+        &_Link {
+          margin: 0px;
+        }
+      }
+      &_CopyRight {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        &_GDPR {
+          margin: 1rem 0;
+          gap: 0.6rem;
+          justify-content: space-evenly;
+          &_Text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

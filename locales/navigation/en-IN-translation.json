@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "footer": {
+      "title": {
+        "navigation": "Navigation",
+        "account": "Account",
+        "copyright": " @ {{year}} RSS. All Rights Reserved"
+      },
+      "statement": {
+        "title": "We Are an Equal Opportunity Employer",
+        "description": "Royal security services is proud to be equal opportunity employers. We value and encourage diversity and solicit applications from all qualified applicants without regard to race, color, national origin,religion, sex, age, marital status, disability, veteran status, sexual orientation, gender identity or expression, or other characteristics protected by law. Royal security services is also committed to providing reasonable accommodations for applicants with disabilities. Individuals who need a reasonable accommodation because of a disability for any part of the employment process should ask to speak with a Human Resources representative to request an accommodation."
+      },
+      "links": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "contact": "Contact",
+        "sign": "Sign In",
+        "terms": "Terms of use",
+        "privacy": "Privacy notice"
+      }
+    }
+  }
+}

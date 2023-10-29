@@ -1,0 +1,109 @@
+// screen sizes
+$screen-sm: 320px;
+$screen-s: 600px;
+$screen-md: 768px;
+$screen-l: 1024px;
+$screen-xl: 1248px;
+$screen-xxl: 1440px;
+// screen sizes end
+
+// colors
+$white: #fff;
+$black: #000;
+$brand-primary-color: #0c2074;
+$brand-praimry-dark-color: #202124;
+$brand-secondary-color: #0c4da9;
+$brand-secondary-dark-color: #303030;
+$brand-accent-color: #0fc7d9;
+$brand-accent-dark-color: #3c4043;
+$brand-success-color: #0ca968;
+$brand-warn-color: #a91a0c;
+$brand-alert-color: #f4b400;
+// brand background colors
+$brand-background-color: #f7f8fa;
+$brand-darkbg-color: #202124;
+$brand-secondary-bg-color: #f2f2f5;
+// brand shadow colors
+$brand-border-color: #eff2f7;
+$brand-border-dark-color: #202124;
+$brand-border-light-color: #f7f7f9;
+//brand-border colors
+$brand-light-border-color: #dadce0;
+$brand-dark-border-color: #5f6368;
+// text colors
+$brand-primary-text-dark-color: #fff;
+$brand-primary-text-color: #000000de;
+// card colors
+$brand-card-light: $white;
+$brand-card-dark: #303134;
+$brand-secondary-text-color: #3c4043;
+$brand-secondary-text-dark-color: #bdc1c6;
+
+$brand-accent-text-color: #9aa0a6;
+$brand-accent-text-dark-color: #5f6368;
+
+// border
+$brand-border-radius: 0.5rem;
+
+// snackbar
+$brand-snackbar-minwidth: 340px;
+//box-shadow
+$brand-box-dark-shadow: 0 2px 10px rgb(0 0 0 / 30%);
+$brand-box-light-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+  rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+@layer base {
+  :root {
+    --brand-primary-color: #{$brand-primary-color};
+    --brand-secondary-color: #{$brand-secondary-color};
+    --brand-accent-color: #{$brand-accent-color};
+    --brand-primary-text-color: #{$brand-primary-text-color};
+    --brand-secondary-text-color: #{$brand-secondary-text-color};
+    --brand-accent-text-color: #{$brand-accent-text-color};
+    --brand-background-color: #{$brand-background-color};
+    --brand-card-color: #{$brand-card-light};
+    --brand-border-color: #{$brand-light-border-color};
+    --brand-box-shadow: #{$brand-box-light-shadow};
+    --brand-border-radius: #{$brand-border-radius};
+    --brand-white: #{$white};
+    --brand-warn-color: #{$brand-warn-color};
+    --brand-alert-color: #{$brand-alert-color};
+    --screen-sm: #{$screen-sm};
+    --screen-s: #{$screen-s};
+    --screen-md: #{$screen-md};
+    --screen-l: #{$screen-l};
+    --screen-xl: #{$screen-xl};
+    --screen-xxl: #{$screen-xxl};
+    --brand-border-radius: #{$brand-border-radius};
+  }
+}
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --brand-primary-color: #{$brand-praimry-dark-color};
+      --brand-secondary-color: #{$brand-secondary-dark-color};
+      --brand-accent-color: #{$brand-accent-dark-color};
+      --brand-primary-text-color: #{$brand-primary-text-dark-color};
+      --brand-secondary-text-color: #{$brand-secondary-text-dark-color};
+      --brand-accent-text-color: #{$brand-accent-text-dark-color};
+      --brand-background-color: #{$brand-border-dark-color};
+      --brand-card-color: #{$brand-card-dark};
+      --brand-border-color: #{$brand-dark-border-color};
+      --brand-box-shadow: #{$brand-box-dark-shadow};
+      --brand-border-radius: #{$brand-border-radius};
+      --brand-white: #{$white};
+      --brand-warn-color: #{$brand-warn-color};
+      --brand-alert-color: #{$brand-alert-color};
+      --screen-sm: #{$screen-sm};
+      --screen-s: #{$screen-s};
+      --screen-md: #{$screen-md};
+      --screen-l: #{$screen-l};
+      --screen-xl: #{$screen-xl};
+      --screen-xxl: #{$screen-xxl};
+      --brand-border-radius: #{$brand-border-radius};
+    }
+
+    html {
+      color-scheme: dark;
+    }
+  }
+}

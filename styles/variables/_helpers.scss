@@ -1,0 +1,118 @@
+/* setting box-sizing to border-box */
+*,
+*::after*::before {
+  box-sizing: border-box;
+}
+
+// removing default margin and padding added by browser agent
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//removing padding from h1-h6,p
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  padding: 0;
+}
+
+// making images responsive
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// removing text decoration from anchor tag
+a {
+  text-decoration: none;
+  color: var(--brand-primary-text-color,$brand-primary-text-color);
+}
+
+// setting body and head
+head,
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--brand-background-color, $brand-background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:var(--brand-primary-text-color,$brand-primary-text-color)
+}
+
+body[data-overflow="true"] {
+  overflow: hidden;
+}
+
+#__next {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: var(--brand-background-color, $brand-background-color);;
+}
+
+footer {
+  margin-top: auto;
+}
+
+input:disabled {
+  background-color: inherit;
+}
+button,
+input,
+option,
+select,
+textarea {
+  border: 1px solid var(--brand-border-color, $brand-border-color);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  padding: 14px;
+  border-radius: $brand-border-radius;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--brand-primary-color,$brand-primary-color);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background:var(--brand-background-color,$brand-background-color);
+}
+progress {
+  border-radius: $brand-border-radius; 
+  height: 8px;
+}
+progress::-webkit-progress-bar {
+  // background-color:var(--brand-secondary-color,$brand-primary-color);
+  border-radius: $brand-border-radius;
+  background: var(--brand-border-color);
+}
+progress::-webkit-progress-value {
+  background-color:var(--brand-primary-color,$brand-primary-color);
+  border-radius: $brand-border-radius;
+}
+progress::-moz-progress-bar {
+  /* style rules */
+}
+
+
