@@ -22,9 +22,9 @@ const roboto = Roboto({
   preload: true,
 });
 
-// export const generateStaticParams = async () => {
-//   return locales.map((lang) => ({ lang }));
-// };
+export const generateStaticParams = async () => {
+  return locales.map((lang) => ({ lang }));
+};
 
 const LanguageLayout = ({ children, modal, params: { lang } }: layout) => {
   return (
