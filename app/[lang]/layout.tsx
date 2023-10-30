@@ -12,6 +12,7 @@ type params = {
 
 type layout = {
   children: React.ReactNode;
+  modal: React.ReactNode;
   params: params;
 };
 
@@ -21,16 +22,17 @@ const roboto = Roboto({
   preload: true,
 });
 
-export const generateStaticParams = async () => {
-  return locales.map((lang) => ({ lang }));
-};
+// export const generateStaticParams = async () => {
+//   return locales.map((lang) => ({ lang }));
+// };
 
-const LanguageLayout = ({ children, params: { lang } }: layout) => {
+const LanguageLayout = ({ children, modal, params: { lang } }: layout) => {
   return (
     <html lang={lang} dir={dir(lang)}>
       <body className={`${roboto.className} flex flex-col justify-between`}>
         <Header lang={lang} />
         <section data-testid="rootlayout.wrapper">{children}</section>
+        <section data-testid="modal.container">{modal}</section>
         <Footer lang={lang} />
       </body>
     </html>
