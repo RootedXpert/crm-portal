@@ -1,7 +1,8 @@
+import { Viewport } from "next";
+import dynamic from "next/dynamic";
 import { dir } from "i18next";
 import { Roboto } from "next/font/google";
 import { locales } from "@/i18n/settings";
-import dynamic from "next/dynamic";
 
 const Header = dynamic(() => import("@/components/navigation/header"));
 const Footer = dynamic(() => import("@/components/navigation/footer"));
@@ -24,6 +25,21 @@ const roboto = Roboto({
 
 export const generateStaticParams = async () => {
   return locales.map((lang) => ({ lang }));
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    {
+      color: "var(--brand-primary-color)",
+      media: "(prefers-color-scheme: dark)",
+    },
+    {
+      color: "var(--brand-primary-color)",
+      media: "(prefers-color-scheme: light)",
+    },
+  ],
 };
 
 const LanguageLayout = ({ children, modal, params: { lang } }: layout) => {
