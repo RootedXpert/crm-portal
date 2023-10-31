@@ -52,7 +52,9 @@ const Navigation: React.FC<fc> = ({ styles, t, lang }) => {
           <p data-testid="navigation.footer.title.account">
             {t("navigation.footer.title.account")}
           </p>
-          <Link href="/auth/sign">{t("navigation.footer.links.sign")}</Link>
+          <Link href={`/${lang}/auth/sign`}>
+            {t("navigation.footer.links.sign")}
+          </Link>
         </div>
       </div>
     </div>

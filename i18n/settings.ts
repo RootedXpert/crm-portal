@@ -15,10 +15,10 @@ const defaultNS = "home-page";
 export const cookieName = "i18next";
 
 const locizeOptions = {
-  projectId: "853d6082-2430-4955-807d-41600bf7afda",
-  apiKey: "06e4252f-c0ea-48e0-85c4-abfe509e3607", // Replace with your actual Locize API key
-  referenceLng: "en-IN", // Explicitly set the fallback language,
-  version: "latest",
+  projectId: process.env.projectId,
+  apiKey: process.env.apiKey, // Replace with your actual Locize API key
+  referenceLng: process.env.referenceLng, // Explicitly set the fallback language,
+  version: process.env.version,
 };
 
 export const getOptions = (lng = defaultLocale, ns = defaultNS) => {
