@@ -1,7 +1,6 @@
 import { TFunction } from "i18next";
-import Image from "next/image";
 import dynamic from "next/dynamic";
-import footerlogo from "@/assests/images/logo.png";
+import BrandLogoImage from "@/components/logos/brandlogo";
 import Link from "next/link";
 
 const NavigationLinks = dynamic(
@@ -40,7 +39,7 @@ type fc = {
 const Navigation: React.FC<fc> = ({ styles, t, lang }) => {
   return (
     <div className={styles.brand_row} data-testid="navigation.footer.row">
-      <Image src={footerlogo} className={styles.brand_row_Image} alt="footer" />
+      <BrandLogoImage />
       <div className={styles.brand_row_subrow}>
         <div className={styles.brand_row_subrow_Link}>
           <p data-testid="navigation.footer.title.navigation">

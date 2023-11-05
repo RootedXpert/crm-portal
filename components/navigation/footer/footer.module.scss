@@ -5,9 +5,8 @@
   padding: 3rem 1rem;
   &_row {
     @apply flex justify-between flex-wrap gap-4 w-[90%]  max-w-3xl;
-    &_Image {
-      height: 80px;
-      width: 200px;
+    img {
+      height: 50px;
     }
     &_subrow {
       display: flex;

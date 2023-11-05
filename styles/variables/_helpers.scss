@@ -22,17 +22,10 @@ span {
   padding: 0;
 }
 
-// making images responsive
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
 // removing text decoration from anchor tag
 a {
   text-decoration: none;
-  color: var(--brand-primary-text-color,$brand-primary-text-color);
+  color: var(--brand-primary-text-color, $brand-primary-text-color);
 }
 
 // setting body and head
@@ -48,7 +41,7 @@ body {
   background: var(--brand-background-color, $brand-background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color:var(--brand-primary-text-color,$brand-primary-text-color)
+  color: var(--brand-primary-text-color, $brand-primary-text-color);
 }
 
 body[data-overflow="true"] {
@@ -62,7 +55,7 @@ body[data-overflow="true"] {
   -ms-flex-direction: column;
   flex-direction: column;
   justify-content: space-evenly;
-  background: var(--brand-background-color, $brand-background-color);;
+  background: var(--brand-background-color, $brand-background-color);
 }
 
 footer {
@@ -91,15 +84,15 @@ textarea {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--brand-primary-color,$brand-primary-color);
+  background-color: var(--brand-primary-color, $brand-primary-color);
   border-radius: 20px;
 }
 
 *::-webkit-scrollbar-track {
-  background:var(--brand-background-color,$brand-background-color);
+  background: var(--brand-background-color, $brand-background-color);
 }
 progress {
-  border-radius: $brand-border-radius; 
+  border-radius: $brand-border-radius;
   height: 8px;
 }
 progress::-webkit-progress-bar {
@@ -108,11 +101,9 @@ progress::-webkit-progress-bar {
   background: var(--brand-border-color);
 }
 progress::-webkit-progress-value {
-  background-color:var(--brand-primary-color,$brand-primary-color);
+  background-color: var(--brand-primary-color, $brand-primary-color);
   border-radius: $brand-border-radius;
 }
 progress::-moz-progress-bar {
   /* style rules */
 }
-
-

@@ -1,0 +1,23 @@
+{
+  "authentication": {
+    "sigin": {
+      "form": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Enter your password"
+        },
+        "submit": "continue"
+      },
+      "message": "Use your RootedXpert Account",
+      "private": {
+        "link": "Learn more",
+        "message": "Not your computer? Use Guest mode to sign in privately."
+      },
+      "title": "Sign in"
+    }
+  }
+}

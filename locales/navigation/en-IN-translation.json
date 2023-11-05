@@ -1,34 +1,35 @@
 {
   "navigation": {
-    "header": {
-      "languageselector": {
-        "en-IN": "English",
-        "hi": "Hindi",
-        "bn-IN": "Bengali",
-        "mr-IN": "Marathi",
-        "te-IN": "Telugu",
-        "ta-IN": "Tamil"
-      }
-    },
     "footer": {
-      "title": {
-        "navigation": "Navigation",
-        "account": "Account",
-        "copyright": " @ {{year}} RSS. All Rights Reserved"
+      "links": {
+        "about": "About",
+        "contact": "Contact",
+        "home": "Home",
+        "privacy": "Privacy notice",
+        "services": "Services",
+        "sign": "Sign In",
+        "terms": "Terms of use"
       },
       "statement": {
-        "title": "We Are an Equal Opportunity Employer",
-        "description": "Royal security services is proud to be equal opportunity employers. We value and encourage diversity and solicit applications from all qualified applicants without regard to race, color, national origin,religion, sex, age, marital status, disability, veteran status, sexual orientation, gender identity or expression, or other characteristics protected by law. Royal security services is also committed to providing reasonable accommodations for applicants with disabilities. Individuals who need a reasonable accommodation because of a disability for any part of the employment process should ask to speak with a Human Resources representative to request an accommodation."
+        "description": "Royal security services is proud to be equal opportunity employers. We value and encourage diversity and solicit applications from all qualified applicants without regard to race, color, national origin,religion, sex, age, marital status, disability, veteran status, sexual orientation, gender identity or expression, or other characteristics protected by law. Royal security services is also committed to providing reasonable accommodations for applicants with disabilities. Individuals who need a reasonable accommodation because of a disability for any part of the employment process should ask to speak with a Human Resources representative to request an accommodation.",
+        "title": "We Are an Equal Opportunity Employer"
       },
-      "links": {
-        "home": "Home",
-        "about": "About",
-        "services": "Services",
-        "contact": "Contact",
-        "sign": "Sign In",
-        "terms": "Terms of use",
-        "privacy": "Privacy notice"
+      "title": {
+        "account": "Account",
+        "copyright": " @ {{year}} RSS. All Rights Reserved",
+        "navigation": "Navigation"
+      }
+    },
+    "header": {
+      "languageselector": {
+        "bn-IN": "Bengali",
+        "en-IN": "English",
+        "hi-IN": "Hindi",
+        "mr-IN": "Marathi",
+        "ta-IN": "Tamil",
+        "te-IN": "Telugu"
       }
     }
-  }
+  },
+  "welcome": "welcome"
 }

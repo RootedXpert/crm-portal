@@ -1,0 +1,23 @@
+{
+  "authentication": {
+    "sigin": {
+      "form": {
+        "email": {
+          "label": "ईमेल",
+          "placeholder": "तुमचा ईमेल टाका"
+        },
+        "password": {
+          "label": "पासवर्ड",
+          "placeholder": "तुमचा पासवर्ड टाका"
+        },
+        "submit": "पुढे सुरू ठेवा"
+      },
+      "message": "तुमचे RootedXpert खाते वापरा",
+      "private": {
+        "link": "अधिक जाणून घ्या",
+        "message": "आपला संगणक नाही? खाजगीरित्या साइन इन करण्यासाठी अतिथी मोड वापरा."
+      },
+      "title": "साइन इन करा"
+    }
+  }
+}

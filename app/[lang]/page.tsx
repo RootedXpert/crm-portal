@@ -1,10 +1,11 @@
 import dynamic from "next/dynamic";
 import { useTranslation } from "@/i18n";
+import { Locale } from "@/i18n/settings";
 const Intro = dynamic(() => import("@/components/pages/home/intro"));
 
 type page = {
   params: {
-    lang: string;
+    lang: Locale;
   };
 };
 

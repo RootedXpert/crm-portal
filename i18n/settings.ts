@@ -2,16 +2,20 @@ export const defaultLocale = "en-IN";
 
 export const locales = [
   defaultLocale,
-  "hi",
+  "hi-IN",
   "bn-IN",
   "mr-IN",
   "te-IN",
   "ta-IN",
 ];
 
-export const supportedLngs = [...locales, "ta", "te", "mr", "bn"];
+export type Locale = (typeof locales)[number];
 
-const defaultNS = "home-page";
+export const namespaces = ["authentication", "home-page", "navigation"];
+
+export const supportedLngs = [...locales, "en", "ta", "te", "mr", "bn"];
+
+export const defaultNS = "home-page";
 export const cookieName = "i18next";
 
 const locizeOptions = {
@@ -21,13 +25,7 @@ const locizeOptions = {
   version: process.env.version,
 };
 
-export const getOptions = (lng = defaultLocale, ns = defaultNS) => {
-  const NODE_ENV = process.env.NODE_ENV;
-  if (NODE_ENV === "production") return getOptionsLocize(lng, ns);
-  return getOptionsLocal(lng, ns);
-};
-
-const getOptionsLocal = (lng = defaultLocale, ns = defaultNS) => {
+export const getOptionsLocal = (lng = defaultLocale, ns = defaultNS) => {
   return {
     supportedLngs: supportedLngs,
     defaultLocale,
@@ -39,11 +37,12 @@ const getOptionsLocal = (lng = defaultLocale, ns = defaultNS) => {
   };
 };
 
-const getOptionsLocize = (lng = defaultLocale, ns = defaultNS) => {
+export const getOptionsLocize = (lng = defaultLocale, ns = defaultNS) => {
   return {
-    lng: lng,
+    lng,
     ns,
     fallbackNS: defaultNS,
+    debug: true,
     supportedLngs: supportedLngs,
     fallbackLng: defaultLocale,
     defaultNS,
