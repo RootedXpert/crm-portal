@@ -1,6 +1,4 @@
-import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
-
 import { useTranslation } from "@/i18n";
 import { locales } from "@/i18n/settings";
 

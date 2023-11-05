@@ -36,6 +36,7 @@ const links = [
     title: "navigation.footer.links.sign",
   },
 ];
+
 const HeaderLinks: React.FC<componenet> = ({ lang }) => {
   return (
     <div
