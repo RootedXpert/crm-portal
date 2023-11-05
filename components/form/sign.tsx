@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { TFunction } from "i18next";
+import { authSign } from "@/actions/auth/sign/auth";
 const Input = dynamic(() => import("@/components/form/input"));
 const Button = dynamic(() => import("@/components/button"));
 
@@ -9,7 +10,10 @@ type fc = {
 
 const SignForm: React.FC<fc> = ({ t }) => {
   return (
-    <form className="py-8 flex flex-col justify-between gap-4">
+    <form
+      action={authSign}
+      className="py-8 flex flex-col justify-between gap-4"
+    >
       <Input
         name="email"
         type="email"

@@ -13,7 +13,7 @@ export type Locale = (typeof locales)[number];
 
 export const namespaces = ["authentication", "home-page", "navigation"];
 
-export const supportedLngs = [...locales, "en", "ta", "te", "mr", "bn"];
+export const supportedLngs = [...locales];
 
 export const defaultNS = "home-page";
 export const cookieName = "i18next";
