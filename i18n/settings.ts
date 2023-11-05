@@ -33,6 +33,7 @@ export const getOptionsLocal = (lng = defaultLocale, ns = defaultNS) => {
     fallbackNS: defaultNS,
     fallbackLng: defaultLocale,
     defaultNS,
+    debug: process.env.NODE_ENV === "development",
     ns,
   };
 };
@@ -42,7 +43,7 @@ export const getOptionsLocize = (lng = defaultLocale, ns = defaultNS) => {
     lng,
     ns,
     fallbackNS: defaultNS,
-    debug: true,
+    debug: process.env.NODE_ENV === "development",
     supportedLngs: supportedLngs,
     fallbackLng: defaultLocale,
     defaultNS,

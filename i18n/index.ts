@@ -10,7 +10,7 @@ type options = {
   keyPrefix?: string;
 };
 
-const createI18nInstance = async (lng: Locale, ns: string) => {
+export const createI18nInstance = async (lng: Locale, ns: string) => {
   const NODE_ENV = process.env.NODE_ENV;
   if (NODE_ENV == "production") {
     return createI18nInstanceLocize(lng, ns);
