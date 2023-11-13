@@ -2,6 +2,7 @@ import { TFunction } from "i18next";
 import dynamic from "next/dynamic";
 import BrandLogoImage from "@/components/logos/brandlogo";
 import Link from "next/link";
+import { Locale } from "@/i18n/settings";
 
 const NavigationLinks = dynamic(
   () => import("@/components/navigation/links/navigation")
@@ -33,7 +34,7 @@ const links = [
 type fc = {
   styles: styles;
   t: TFunction<any, string>;
-  lang: string;
+  lang: Locale;
 };
 
 const Navigation: React.FC<fc> = ({ styles, t, lang }) => {

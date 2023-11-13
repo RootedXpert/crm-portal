@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import styles from "./header.module.scss";
+import { Locale } from "@/i18n/settings";
 
 const LanguageSelector = dynamic(() => import("@/components/languageselector"));
 
@@ -11,7 +12,7 @@ type styles = {
   readonly [key: string]: string;
 };
 type componenet = {
-  lang: string;
+  lang: Locale;
 };
 
 const links = [

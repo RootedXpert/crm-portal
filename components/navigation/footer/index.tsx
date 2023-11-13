@@ -3,6 +3,7 @@ import { useTranslation } from "@/i18n";
 import dynamic from "next/dynamic";
 
 import styles from "./footer.module.scss";
+import { Locale } from "@/i18n/settings";
 
 const Navigation = dynamic(
   () => import("@/components/navigation/footer/navigation")
@@ -18,7 +19,7 @@ const FooterStatement = dynamic(
 );
 
 type componenet = {
-  lang: string;
+  lang: Locale;
 };
 
 const Footer = async ({ lang }: componenet) => {

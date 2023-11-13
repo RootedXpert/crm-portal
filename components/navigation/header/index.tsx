@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import style from "./header.module.scss";
+import { Locale } from "@/i18n/settings";
 
 const Hamburger = dynamic(
   () => import("@/components/navigation/header/hamburger")
@@ -12,7 +13,7 @@ const HeaderLinks = dynamic(
 );
 
 type componenet = {
-  lang: string;
+  lang: Locale;
 };
 
 const Navbar = async ({ lang }: componenet) => {

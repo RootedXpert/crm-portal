@@ -34,7 +34,7 @@ const createI18nInstanceLocal = async (lng: Locale, ns: string) => {
     .use(initReactI18next)
     .use(
       resourcesToBackend(
-        (language: Locale, namespace: string) =>
+        (language: string, namespace: string) =>
           import(`@/locales/${namespace}/${language}-translation.json`)
       )
     )

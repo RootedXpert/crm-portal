@@ -1,4 +1,5 @@
 import { useTranslation } from "@/i18n";
+import { Locale } from "@/i18n/settings";
 import Link from "next/link";
 
 type link = {
@@ -6,7 +7,7 @@ type link = {
   title: string;
 };
 type componenet = {
-  lang: string;
+  lang: Locale;
   links: link[];
 };
 

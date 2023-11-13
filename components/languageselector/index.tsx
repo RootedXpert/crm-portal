@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useTranslation } from "@/i18n";
-import { locales } from "@/i18n/settings";
+import { Locale, locales } from "@/i18n/settings";
 
 type fc = {
-  lang: string;
+  lang: Locale;
 };
 const LanguageSelector: React.FC<fc> = async ({ lang }) => {
   const { t } = await useTranslation(lang, "navigation");
