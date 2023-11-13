@@ -1,0 +1,26 @@
+.About {
+  width: unquote($string: "min(90%,100rem)");
+  margin-bottom: 20px;
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &_container {
+    display: flex;
+    width: 46%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &_Text {
+      margin-bottom: 20px;
+      text-align: center;
+      span {
+        font-weight: bold;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -107,3 +107,18 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   /* style rules */
 }
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  //animation: fade-in 1.35s linear;
+  scroll-snap-type: y proximity;
+  overflow-y: auto;
+  & > * {
+    scroll-snap-align: start;
+  }
+}

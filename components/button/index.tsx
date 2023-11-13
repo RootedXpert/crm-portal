@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, memo } from "react";
 
 interface button extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
@@ -6,7 +6,13 @@ interface button extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<button> = ({ text, ...rest }) => {
-  return <button {...rest}>{text}</button>;
+  return (
+    <button {...rest}>
+      <p>{text}</p>
+    </button>
+  );
 };
 
-export default Button;
+const MemorizedButton = memo(Button);
+
+export default MemorizedButton;

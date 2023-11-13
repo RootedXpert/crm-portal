@@ -6,7 +6,7 @@ type fc = {
 
 const AuthFooter: React.FC<fc> = ({ t, lang }) => {
   return (
-    <p>
+    <p data-testid="authentication.sigin.private.message">
       {t("authentication.sigin.private.message")}
       <a
         href={`https://support.google.com/chrome/answer/6130773?hl=${lang}`}

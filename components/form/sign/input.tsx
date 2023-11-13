@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, memo } from "react";
 
 interface input extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -14,4 +14,6 @@ const Input: React.FC<input> = ({ name, label, ...rest }) => {
   );
 };
 
-export default Input;
+const MemorizedInput = memo(Input);
+
+export default MemorizedInput;

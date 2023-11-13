@@ -9,7 +9,7 @@ export const locales = [
   "ta-IN",
 ];
 
-export type Locale = (typeof locales)[number];
+export type Locale = "en-IN" | "hi-IN" | "bn-IN" | "mr-IN" | "te-IN" | "ta-IN";
 
 export const namespaces = ["authentication", "home-page", "navigation"];
 

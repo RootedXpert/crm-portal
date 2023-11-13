@@ -6,7 +6,7 @@ import { TFunction } from "i18next";
 type fc = {
   t: TFunction<any, string>;
 };
-const Intro: React.FC<fc> = ({ t }) => {
+const Intro: React.FC<fc> = async ({ t }) => {
   return (
     <section className={styles.Intro_Home} data-testid={"pages.home.intro"}>
       <div className={styles.Intro_Home__Box}>

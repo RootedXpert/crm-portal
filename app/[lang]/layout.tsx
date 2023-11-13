@@ -45,7 +45,9 @@ const LanguageLayout = ({ children, params: { lang } }: layout) => {
     <html lang={lang} dir={dir(lang)}>
       <body className={`${roboto.className} flex flex-col justify-between`}>
         <Header lang={lang} />
-        <section data-testid="rootlayout.wrapper">{children}</section>
+        <section data-testid="rootlayout.wrapper" className="wrapper">
+          {children}
+        </section>
         <Footer lang={lang} />
       </body>
     </html>

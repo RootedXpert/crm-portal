@@ -1,5 +1,7 @@
-const AuthLoading = () => {
-  return <p>loading sigin</p>;
+import SignFormLoading from "@/components/form/sign/loading";
+
+const Loading = () => {
+  return <SignFormLoading />;
 };
 
-export default AuthLoading;
+export default Loading;
