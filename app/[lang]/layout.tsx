@@ -55,3 +55,7 @@ const LanguageLayout = ({ children, params: { lang } }: layout) => {
 };
 
 export default LanguageLayout;
+
+// Next.js Route segment config
+
+export const dynamicParams = false; // true | false,
