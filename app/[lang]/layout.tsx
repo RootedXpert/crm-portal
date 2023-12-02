@@ -12,6 +12,7 @@ type params = {
 
 type layout = {
   children: React.ReactNode;
+  modal: React.ReactNode;
   params: params;
 };
 
@@ -40,7 +41,7 @@ export const viewport: Viewport = {
   ],
 };
 
-const LanguageLayout = ({ children, params: { lang } }: layout) => {
+const LanguageLayout = ({ children, modal, params: { lang } }: layout) => {
   return (
     <html lang={lang} dir={dir(lang)}>
       <body className={`${roboto.className} flex flex-col justify-between`}>
@@ -48,6 +49,7 @@ const LanguageLayout = ({ children, params: { lang } }: layout) => {
         <section data-testid="rootlayout.wrapper" className="wrapper">
           {children}
         </section>
+        <section data-testid="rootlayout.modal">{modal}</section>
         <Footer lang={lang} />
       </body>
     </html>
@@ -58,4 +60,4 @@ export default LanguageLayout;
 
 // Next.js Route segment config
 
-export const dynamicParams = false; // true | false,
+export const dynamicParams = true; // true | false,

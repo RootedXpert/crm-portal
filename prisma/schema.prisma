@@ -1,0 +1,48 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["tracing", "metrics", "multiSchema", "fullTextSearch", "postgresqlExtensions"]
+}
+
+// prisma/schema.prisma
+datasource db {
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
+    schemas   = ["user", "public"]
+    // If you want to use Prisma Migrate, you will need to manually create a shadow database
+    // https://neon.tech/docs/guides/prisma-migrate#configure-a-shadow-database-for-prisma-migrate
+    // make sure to append ?connect_timeout=10 to the connection string
+    // shadowDatabaseUrl = env(“SHADOW_DATABASE_URL”)
+}
+
+model UserDetails {
+    id            String           @id @default(uuid())
+    name          String
+    number        BigInt
+    created_date  DateTime         @default(now()) @db.Timestamptz(6)
+    is_active     Boolean          @default(false)
+    modified_date DateTime         @db.Timestamptz(6)
+    manager_id    String?
+    manager       UserDetails?     @relation("manager", fields: [manager_id], references: [user_id])
+    subordinates  UserDetails[]    @relation("manager")
+    user          UserCredentials  @relation("user_id", fields: [user_id], references: [user_id])
+    user_id       String           @unique
+    modified      UserCredentials? @relation("modified_by", fields: [modified_by], references: [user_id])
+    modified_by   String?
+    dob           DateTime?        @db.Timestamp(6)
+    doj           DateTime?        @db.Timestamp(6)
+
+    @@schema("user")
+}
+
+model UserCredentials {
+    id             String        @id @default(uuid())
+    user_id        String        @unique @default(uuid())
+    email          String        @unique
+    corpid         String
+    password       String
+    user_details   UserDetails[] @relation("user_id")
+    modified_users UserDetails[] @relation("modified_by")
+
+    @@schema("user")
+}

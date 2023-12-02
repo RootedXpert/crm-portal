@@ -11,14 +11,15 @@ type fc = {
   lang: Locale;
 };
 
-const SignForm: React.FC<fc> = ({ lang }) => {
+const SignForm: React.FC<fc> = async ({ lang }) => {
   const { t } = useTranslation(lang, "authentication", {});
   const [isPending, startTransition] = useTransition();
   return (
     <form
       action={(formData: FormData) => {
         startTransition(async () => {
-          await authSign(formData);
+          const data = await authSign(formData);
+          console.log(data);
         });
       }}
       className="py-8 flex flex-col justify-between gap-4"

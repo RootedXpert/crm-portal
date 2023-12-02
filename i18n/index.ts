@@ -12,9 +12,9 @@ type options = {
 
 export const createI18nInstance = async (lng: Locale, ns: string) => {
   const NODE_ENV = process.env.NODE_ENV;
-  if (NODE_ENV == "production") {
-    return createI18nInstanceLocize(lng, ns);
-  }
+  // if (NODE_ENV == "production") {
+  //   return createI18nInstanceLocize(lng, ns);
+  // }
   return createI18nInstanceLocal(lng, ns);
 };
 

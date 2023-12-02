@@ -15,7 +15,7 @@
       "message": "Use your RootedXpert Account",
       "private": {
         "link": "Learn more",
-        "message": "Not your computer? Use Guest mode to sign in privately."
+        "message": "Not your computer? Use Guest mode to authenticate in privately."
       },
       "title": "Sign in"
     }

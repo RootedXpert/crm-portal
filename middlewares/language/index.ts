@@ -4,7 +4,7 @@ import Negotiator from "negotiator";
 import { defaultLocale, locales, cookieName } from "@/i18n/settings";
 
 // Get the preferred locale, similar to the above or using a library
-function getLocale(request: NextRequest) {
+const getLocale = (request: NextRequest) => {
   if (request.cookies.has(cookieName))
     return request.cookies.get(cookieName)?.value.toString();
   const headers = {
@@ -12,7 +12,7 @@ function getLocale(request: NextRequest) {
   };
   const languages = new Negotiator({ headers: headers }).languages();
   return match(languages, locales, defaultLocale); // -> 'en-US'
-}
+};
 
 const languageMiddleware = async (request: NextRequest) => {
   // Check if there is any supported locale in the pathname

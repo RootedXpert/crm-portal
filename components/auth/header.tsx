@@ -1,17 +1,13 @@
 import dynamic from "next/dynamic";
-import { TFunction } from "i18next";
+
 const BrandLogoImage = dynamic(() => import("@/components/logos/brandlogo"));
 
-type fc = {
-  t: TFunction<any, string>;
-};
+type fc = {};
 
-const AuthHeader: React.FC<fc> = ({ t }) => {
+const AuthHeader: React.FC<fc> = () => {
   return (
     <section className="flex flex-col items-center gap-3">
       <BrandLogoImage />
-      <h2>{t("authentication.sigin.title")}</h2>
-      <p>{t("authentication.sigin.message")}</p>
     </section>
   );
 };
