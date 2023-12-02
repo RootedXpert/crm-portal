@@ -11,7 +11,7 @@ type fc = {
   lang: Locale;
 };
 
-const SignForm: React.FC<fc> = async ({ lang }) => {
+const SignForm: React.FC<fc> = ({ lang }) => {
   const { t } = useTranslation(lang, "authentication", {});
   const [isPending, startTransition] = useTransition();
   return (
